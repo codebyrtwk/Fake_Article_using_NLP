@@ -25,7 +25,7 @@ choice = st.sidebar.selectbox("Choose" , activities)
 
 
 
-# DATA PREPROCESSING
+# DATA PREPROCESSING using kpg_talkies
 def get_clean(x):
     x = str(x).lower().replace('\\', '').replace('_', ' ')
     x = ps.cont_exp(x)
@@ -46,6 +46,8 @@ if choice == "Prediction":
 	heading = st.title("Fake News Classifier")
 	note = st.write("Note : This app will supposed to do prediction on the basis of Article's Features (TF-IDF) using SGD CLassifer!!")
 	article = st.text_area('Enter the News Article')
+	ml_models = ["SGD" , "Random Forest" , "KNN"]
+	models_select = st.selectbox("Please Choose a Model" , ml_models)
 	submit_button = st.button('Predict')
 
 	
