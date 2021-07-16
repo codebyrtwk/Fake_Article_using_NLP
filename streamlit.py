@@ -20,7 +20,7 @@ sgd = open('SGD_.pkl','rb')
 clf = joblib.load(sgd)
 
 
-activities = ['Prediction' , "Text Preprocessing" , 'Confusion Matrix' , 'WordCloud']
+activities = ['Prediction' , "Text Preprocessing" ]
 choice = st.sidebar.selectbox("Choose" , activities)
 
 
@@ -46,8 +46,8 @@ if choice == "Prediction":
 	heading = st.title("Fake News Classifier")
 	note = st.write("Note : This app will supposed to do prediction on the basis of Article's Features (TF-IDF) using SGD CLassifer!!")
 	article = st.text_area('Enter the News Article')
-	ml_models = ["SGD" , "Random Forest" , "KNN"]
-	models_select = st.selectbox("Please Choose a Model" , ml_models)
+	# ml_models = ["SGD" , "Random Forest" , "KNN"]
+	# models_select = st.selectbox("Please Choose a Model" , ml_models)
 	submit_button = st.button('Predict')
 
 	
