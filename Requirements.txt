@@ -1,5 +1,7 @@
+Python 3.9
 Numpy
 Pandas
 NLTK
 ScikitLearn
 KPGTalkie
+streamlit
